@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_first_app/login_page.dart';
+import 'package:flutter_first_app/pages/home_page.dart';
+import 'package:flutter_first_app/pages/login_page.dart';
 import 'package:flutter_first_app/styles/app_colors.dart';
  
 void main() {
@@ -18,7 +19,12 @@ class MyApp extends StatelessWidget {
                         fontFamily: 'Urbanist', 
                         scaffoldBackgroundColor: AppColors.background,
                       ),
-      home: const LoginPage(),
+      // home: const LoginPage(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const LoginPage(),
+        "/home": (context) => const HomePage(),
+      },
     );
   }
 }

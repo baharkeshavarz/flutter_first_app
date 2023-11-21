@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
                                 fillColor: Colors.white.withOpacity(0.5),
                               ),
                       ),
-                    const SizedBox(height: 8,),
+                    const SizedBox(height: 12,),
                     TextField(
                             decoration: InputDecoration(
                               hintText: "Password",
@@ -66,7 +66,9 @@ class LoginPage extends StatelessWidget {
                                 style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.amber,
                                 ),
-                              onPressed: () {},
+                              onPressed: () {
+                                   Navigator.of(context).pushReplacementNamed("/home");  //remove the stack in navigation
+                              },
                               child: const Text("Log in"),
                             ),
                         ),

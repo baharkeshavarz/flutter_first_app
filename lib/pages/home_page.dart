@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         title: const Text("5minutesflutter",
+         title: const Text("Home Page",
                            style: TextStyle(color: AppColors.white,
                         ),
                      ),

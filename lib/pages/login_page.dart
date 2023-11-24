@@ -12,7 +12,8 @@ class LoginPage extends StatelessWidget {
             child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-             children: [
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                     const Spacer(),
                     const Text(
                               "Hello, welcome back!", 

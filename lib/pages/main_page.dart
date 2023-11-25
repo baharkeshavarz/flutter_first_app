@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first_app/pages/home_page.dart';
+import 'package:flutter_first_app/pages/profile_page.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MainPage extends StatefulWidget {
@@ -12,13 +13,11 @@ class MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
   final pages = [
-    const HomePage(),
+     HomePage(),
     const Center(
       child: Text("Favorite", style: TextStyle(color: Colors.white),),
     ),
-     const Center(
-      child: Text("User", style: TextStyle(color: Colors.white),),
-    ),
+     const ProfilePage(),
      const Center(
       child: Text("Messages", style: TextStyle(color: Colors.white),),
     ),

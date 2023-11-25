@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first_app/styles/app_colors.dart';
+import 'package:flutter_first_app/widgets/post_item.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+  List<String> users = [];
 
   @override
   Widget build (BuildContext context) {
+    mockUsersFromServers(); // it's not a good practice to add calculation in build method
     return Scaffold(
       appBar: AppBar(
          title: const Text("Home Page",
@@ -20,33 +24,18 @@ class HomePage extends StatelessWidget {
             Icon(Icons.add_alert),
          ],
       ),
-      body: ListView(
-             children: mockUsersFromServers(),
-         ),
+      body: ListView.builder(
+          itemCount: users.length,
+          itemBuilder: (context, index) {
+             return PostItem(user: users[index],);
+          },
+       ),
       );
   }
 
-
- Widget _userItem() {
-     return Row(
-      children: [
-        Image.asset(
-            "assets/images/google.png",
-             width: 40,
-             height: 40,
-          ),
-          const SizedBox(width: 40,),
-          const Text("Sara Keshavarz ", style: TextStyle(color: Colors.amber),),
-      ],
-     );
-  }
-
-  List<Widget> mockUsersFromServers() {
-     List<Widget> users = [];
-     for (var i= 0; i < 50; i++) {
-        users.add(_userItem());
-     }
-
-     return users;
-  }
+    mockUsersFromServers() {
+     for (var i= 0; i < 5; i++) {
+          users.add("User number $i");
+      }
+    }
 }

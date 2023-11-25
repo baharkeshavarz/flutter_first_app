@@ -19,12 +19,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
                         fontFamily: 'Urbanist', 
                         scaffoldBackgroundColor: AppColors.background,
+                        brightness: Brightness.dark,
                       ),
       // home: const LoginPage(),
       initialRoute: "/",
       routes: {
         "/": (context) => const MainPage(),
-        "/home": (context) => const HomePage(),
+        "/home": (context) => HomePage(),
         "/main": (context) => const MainPage(),
         "/test": (context) => const TestPage(),
       },

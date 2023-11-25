@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first_app/config/app_routes.dart';
+import 'package:flutter_first_app/config/app_strings.dart';
 
 class LoginPage extends StatelessWidget {
    const LoginPage({super.key});
@@ -16,7 +18,7 @@ class LoginPage extends StatelessWidget {
                 children: [
                     const Spacer(),
                     const Text(
-                              "Hello, welcome back!", 
+                              AppStrings.helloWelcome,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 22,
@@ -60,7 +62,7 @@ class LoginPage extends StatelessWidget {
                               ),
                           ),
                       const SizedBox(height: 32,),
-                    SizedBox(  // make the button biger
+                       SizedBox(  // make the button biger
                           width: double.infinity,
                           height: 48,
                           child: ElevatedButton(
@@ -68,7 +70,7 @@ class LoginPage extends StatelessWidget {
                                       backgroundColor: Colors.amber,
                                 ),
                               onPressed: () {
-                                   Navigator.of(context).pushReplacementNamed("/home");  //remove the stack in navigation
+                                   Navigator.of(context).pushReplacementNamed(AppRoutes.home);  //remove the stack in navigation
                               },
                               child: const Text("Log in"),
                             ),

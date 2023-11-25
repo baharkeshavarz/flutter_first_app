@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
                         actions:  [
                             IconButton(
                               onPressed: () {},
-                              icon:  SvgPicture.asset("assets/svg/ic_location.svg"),
+                              icon: SvgPicture.asset("assets/svg/ic_location.svg"),
                              ),
                         ],
                      ),

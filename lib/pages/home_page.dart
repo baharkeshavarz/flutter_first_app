@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_first_app/styles/app_colors.dart';
 import 'package:flutter_first_app/widgets/post_item.dart';
+import 'package:flutter_first_app/pages/toolbar_page.dart';
+import 'package:flutter_svg/svg.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
@@ -11,19 +12,15 @@ class HomePage extends StatelessWidget {
   Widget build (BuildContext context) {
     mockUsersFromServers(); // it's not a good practice to add calculation in build method
     return Scaffold(
-      appBar: AppBar(
-         title: const Text("Home Page",
-                           style: TextStyle(color: AppColors.white,
-                        ),
+      appBar: Toolbar(
+                        title: "Home",
+                        actions:  [
+                            IconButton(
+                              onPressed: () {},
+                              icon:  SvgPicture.asset("assets/svg/ic_location.svg"),
+                             ),
+                        ],
                      ),
-         centerTitle: false,
-         backgroundColor: AppColors.background,
-         elevation: 0,
-         actions: const [
-            Icon(Icons.location_on_rounded),
-            Icon(Icons.add_alert),
-         ],
-      ),
       body: ListView.builder(
           itemCount: users.length,
           itemBuilder: (context, index) {

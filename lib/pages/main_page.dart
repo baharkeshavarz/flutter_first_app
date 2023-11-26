@@ -60,7 +60,7 @@ class MainPageState extends State<MainPage> {
         //     },
         //   ),
     );
-}
+  }
 }
 
   final pages = [

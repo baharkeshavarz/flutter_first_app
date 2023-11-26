@@ -1,6 +1,7 @@
 import 'package:flutter_first_app/pages/edit_profile_page.dart';
 import 'package:flutter_first_app/pages/home_page.dart';
 import 'package:flutter_first_app/pages/main_page.dart';
+import 'package:flutter_first_app/pages/nearby_page.dart';
 import 'package:flutter_first_app/pages/test_page.dart';
 
 class AppRoutes {
@@ -10,6 +11,7 @@ class AppRoutes {
         "/main": (context) => const MainPage(),
         "/test": (context) => const TestPage(),
         "/edit_profile": (context) => const EditProfilePage(),
+        "/nearby": (context) => const NearbyPage(),
       };
 
   static const login = '/';
